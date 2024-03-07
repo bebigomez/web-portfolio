@@ -1,0 +1,52 @@
+---
+
+const description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+
+const navItems = [
+  {
+    title: 'Project One',
+    description,
+    image: '/projects/project-1.jpg',
+    // url: '/#home',
+  },
+  {
+    title: 'Project Two',
+    description,
+    image: '/projects/project-2.jpg',
+    // url: '/#projects',
+  },
+  {
+    title: 'Project Three',
+    description,
+    image: '/projects/project-3.jpg',
+    // url: '/#skills',
+  },
+];
+---
+
+<section id="projects" class='w-[1000px] m-auto pb-16'>
+  <h1 class="text-4xl font-bold py-10 text-center">Projects</h1>
+  <div class="grid grid-cols-1">
+    {
+      navItems.map((project) => (
+        <div class="mb-8 gap-10 grid grid-cols-Uno/dos">
+          <img
+            src={project.image}
+            class='h-full w-auto object-cover rounded-xl col-span-1 self-center justify-self-end'
+          />
+          <div class="col-span-2 sm:col-span-1"> <!-- Para que el texto ocupe las 2 columnas en pantallas pequeñas y 1 columna en pantallas grandes -->
+            <h3 class="text-3xl font-semibold mb-4">{project.title}</h3>
+            <p class="text-lg">{description}</p>
+              <a
+                href="#"
+                class="bg-[#2000FF] hover:bg-[#1200AA] text-white font-regular my-6 py-2 px-4 rounded-xl shadow-xl inline-block"
+              >
+                Try it out
+              </a>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
+

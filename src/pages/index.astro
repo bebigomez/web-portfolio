@@ -1,10 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Hero from '../components/Hero.astro';
+import Projects from '../components/Projects.astro';
+import Features from '../components/Features.astro';
+
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<h1>Testing</h1>
-	</main>
+  <main class='px-60'>
+    <Hero />
+		<Projects />
+		<Features />
+  </main>
 </Layout>
