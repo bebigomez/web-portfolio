@@ -18,17 +18,75 @@ const navItems = [
 ];
 ---
 
-<header>
-  <nav class="flex justify-center p-8 text-4xl font-medium">
+<header
+  id="myHeader"
+  class="fixed right-0 left-0 top:0 transition duration-500"
+>
+  <nav class="bg-white text-1xl font-medium text-center py-4 md:text-3xl">
     {
       navItems.map((link) => (
-        <a  
-        aria-label={link.label}
-        href={link.url}
-        class='mx-4'>
+        <a aria-label={link.label} href={link.url} class="mx-4 inline-block">
           {link.title}
         </a>
       ))
     }
   </nav>
 </header>
+
+<style>
+  header nav a.activo {
+    text-decoration: underline;
+    text-decoration-color: black; /* Color del subrayado */
+    text-underline-offset: 10px; /* Ajusta la distancia entre el texto y el subrayado */
+    border-radius: 100px;
+}
+
+</style>
+
+<script>
+  let lastScrollTop = 0;
+  const header = document.getElementById('myHeader');
+
+  function compareScrollPosition() {
+    let currentScroll = window.scrollY || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+      header!.style.transform = 'translateY(-100%)';
+    } else {
+      header!.style.transform = 'translateY(0)';
+    }
+
+    lastScrollTop = currentScroll;
+  }
+
+  function determineVisibleSection() {
+    var sections = document.querySelectorAll('section');
+    var scrollPosition =
+      window.scrollY || document.documentElement.scrollTop;
+
+    for (var i = 0; i < sections.length; i++) {
+      var section = sections[i];
+      var sectionTop = section.offsetTop;
+      var sectionHeight = section.clientHeight;
+
+      if (
+        // El -2 de la línea siguiente permite que se añada el estilo a la sección.
+        scrollPosition > sectionTop -2 &&
+        scrollPosition < sectionTop + sectionHeight
+      ) {
+        // Si la sección está visible, resaltar el enlace correspondiente en el encabezado
+        var sectionId = section.getAttribute('id');
+        var navLink = document.querySelector('a[href="/#' + sectionId + '"]');
+        navLink?.classList.add('activo');
+      } else {
+        // Si la sección no está visible, quitar cualquier resaltado del enlace correspondiente en el encabezado
+        var sectionId = section.getAttribute('id');
+        var navLink = document.querySelector('a[href="/#' + sectionId + '"]');
+        navLink?.classList.remove('activo');
+      }
+    }
+  }
+
+  window.addEventListener('scroll', compareScrollPosition);
+  window.addEventListener('scroll', determineVisibleSection);
+</script>

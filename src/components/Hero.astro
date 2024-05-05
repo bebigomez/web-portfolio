@@ -1,22 +1,24 @@
 ---
+import Button from '../components/Button.astro';
 import GitHub from '../components/icons/GitHub.astro';
 import LinkedIn from '../components/icons/LinkedIn.astro';
 ---
 
-<section class="flex justify-center gap-16 py-52">
-  <img class='min-h-96 min-w-fit' class="h-96 w-full object-cover" src="/me.png" alt="Victor Gomez Photo" />
-  <div class="flex flex-col justify-center items-center">
-    <h1 class="text-6xl font-semibold">Victor Gomez</h1>
-    <h2 class="text-3xl font-normal">Full Stack Web Developer</h2>
-    <a
-      class="bg-[#2000FF] transition-transform hover:scale-105 text-white font-regular py-1 px-2 rounded-xl shadow-2xl my-3"
-      href="mailto:correo@ejemplo.com"
-    >
-      Contact me</a
-    >
-    <div class="flex gap-2">
-      <a href="https://github.com/bebigomez"><GitHub class="h-7 w-7 transition-transform hover:scale-105" /></a>
-      <a href="https://github.com/bebigomez"><LinkedIn class="h-7 w-7 transition-transform hover:scale-105" /></a>
+<section id="hero" class="mx-auto py-20 md:flex md:justify-center md:items-center md:py-40">
+  <div class="flex justify-center">
+    <img class="w-72 h-full" src="/me.png" alt="Victor Gomez Photo" />
+  </div>
+  <div class="text-center my-6 md:ml-6 md:text-center md:mt-0">
+    <h1 class="text-4xl font-semibold md:text-5xl">Victor Gomez</h1>
+    <h2 class="font-normal text-lg mb-3 md:text-2xl">Full Stack Web Developer</h2>
+    <Button href="mailto:vhgomez.py@gmail.com">Contact me</Button>
+    <div class="flex gap-2 justify-center md:justify-center mt-3">
+      <a href="https://github.com/bebigomez" target="_blank" rel="noopener">
+        <GitHub class="h-7 w-7 transition-transform hover:scale-105" />
+      </a>
+      <a href="https://www.linkedin.com/in/victor-gomez-dev" target="_blank" rel="noopener">
+        <LinkedIn class="h-7 w-7 transition-transform hover:scale-105" />
+      </a>
     </div>
   </div>
 </section>

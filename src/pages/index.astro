@@ -3,13 +3,17 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import Projects from '../components/Projects.astro';
 import Features from '../components/Features.astro';
+import Stack from '../components/Stack.astro';
+import Footer from '../components/Footer.astro'
 
 ---
 
-<Layout title="Welcome to Astro.">
-  <main class='px-60'>
+<Layout title="BebiGomez Dev">
+  <main>
     <Hero />
-		<Projects />
+    <Projects />
+    <Stack />
 		<Features />
+    <Footer />
   </main>
 </Layout>

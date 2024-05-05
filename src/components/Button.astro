@@ -1,0 +1,18 @@
+---
+interface ButtonProps {
+  href: string;
+}
+
+const { href } = Astro.props as ButtonProps;
+---
+
+<div class="inline-block transition-transform duration-300 hover:scale-105">
+  <a
+    class="bg-[#2000FF] text-white font-regular py-1 px-2 rounded-xl shadow-2xl my-3"
+    href={href}
+  >
+    <slot />
+  </a>
+</div>
+
+
