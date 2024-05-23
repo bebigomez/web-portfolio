@@ -1,19 +1,40 @@
 ---
-const technologies = ['css-3', 'html-5', 'javascript', 'react', 'redux', 'jest', 'cypress-icon', 'nodejs-icon', 'express', 'mongodb-icon', 'git-icon', 'github-icon', 'figma'];
+const technologies = [
+  "html-5",
+  "css-3",
+  "javascript",
+  "typescript",
+  "react",
+  "angular",
+  "nodejs-icon",
+  "express",
+  "redux",
+  "mongodb-icon",
+  "jest",
+  "cypress-icon",
+  "material-ui",
+  "tailwind-css",
+  "git-icon",
+  "github-icon",
+  "figma",
+];
 ---
 
 <section id="stack" class="mb-20">
   <h2 class="text-2xl font-bold text-center mb-12 md:text-3xl">Tech Stack</h2>
-  <div class="grid grid-cols-2 gap-8 max-w-72 mx-auto justify-items-center items-center mb-10 md:grid-cols-4 md:max-w-5xl">
+  <div
+    class="grid grid-cols-2 gap-8 max-w-72 mx-auto justify-items-center items-center mb-10 md:grid-cols-4 md:max-w-5xl"
+  >
     {
       technologies.map((item) => (
         <div>
-          <img src={`/stack/${item}.svg`} class='max-h-16 max-w-20' alt={`${item} icon`} />
+          <img
+            src={`/stack/${item}.svg`}
+            class="max-h-16 max-w-20"
+            alt={`${item} icon`}
+          />
         </div>
       ))
     }
   </div>
 </section>
-
-
-
