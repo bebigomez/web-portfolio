@@ -11,6 +11,8 @@ import Button from '../components/Button.astro';
         src="/me-2-min.png"
         alt="Photo of Victor Gomez smiling"
         loading="lazy"
+        width="384"
+        height="256"
       />
     </div>
     <div>
@@ -25,8 +27,9 @@ import Button from '../components/Button.astro';
       
       <div class="text-center mt-4 md:text-left">
         <p>More info ↓</p>
-        <Button>Download curriculum as PDF</Button>
+        <a class="bg-[var(--primary)] text-white font-regular py-1 px-2 rounded-xl shadow-2xl my-3" href="EN_Victor Gomez_02-24.pdf" download="EN_Victor Gomez_02-24">Download curriculum as PDF</a>
       </div>
     </div>
   </div>
 </section>
+
