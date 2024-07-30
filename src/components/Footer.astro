@@ -1,24 +1,24 @@
 ---
-import GitHub from '../components/icons/GitHub.astro';
-import LinkedIn from '../components/icons/LinkedIn.astro';
+import GitHub from "../components/icons/GitHub.astro"
+import LinkedIn from "../components/icons/LinkedIn.astro"
 
 const navItems = [
   {
-    title: 'Back to the start',
-    label: 'Go to start of the page.',
-    url: '/#hero',
+    title: "Back to the start",
+    label: "Go to start of the page.",
+    url: "/#hero",
   },
   {
-    title: 'Projects',
-    label: 'projects',
-    url: '/#projects',
+    title: "Projects",
+    label: "projects",
+    url: "/#projects",
   },
   {
-    title: 'Stack',
-    label: 'stack',
-    url: '/#stack',
+    title: "Stack",
+    label: "stack",
+    url: "/#stack",
   },
-];
+]
 ---
 
 <section id="footer" class="md:max-w-5xl mx-auto">
@@ -37,15 +37,29 @@ const navItems = [
         ))
       }
     </div>
-    <div class="flex justify-between mt-4 md:mt-0 md:justify-normal md:gap-4 items-center">
-      <a href="mailto:vhgomez.py@gmail.com" class="text-gray-500 transition-colors hover:text-black">vhgomez.py@gmail.com</a>
+    <div
+      class="flex justify-between mt-4 md:mt-0 md:justify-normal md:gap-4 items-center"
+    >
+      <a
+        href="mailto:vhgomez.py@gmail.com"
+        class="text-gray-500 transition-colors hover:text-black"
+        >vhgomez.py@gmail.com</a
+      >
       <div class="flex gap-2">
-        <a href="https://github.com/bebigomez"
+        <a
+          href="https://github.com/bebigomez"
+          target="_blank"
+          rel="noopener"
+          aria-label="bebigomez GitHub Page"
           ><GitHub
             class="h-5 w-5 transition-transform hover:scale-105 fill-current text-gray-500 hover:text-black"
           /></a
         >
-        <a href="https://www.linkedin.com/in/victor-gomez-dev"
+        <a
+          href="https://www.linkedin.com/in/victor-gomez-dev"
+          target="_blank"
+          rel="noopener"
+          aria-label="Victor Gomez LinkedIn Page"
           ><LinkedIn
             class="h-5 w-5 transition-transform hover:scale-105 fill-current text-gray-500 hover:text-black"
           /></a
@@ -54,4 +68,3 @@ const navItems = [
     </div>
   </div>
 </section>
-
