@@ -1,0 +1,36 @@
+---
+import ExperienceItem from './ExperienceItem.astro';
+const EXPERIENCE = [
+  {
+    title: 'Full Stack Developer',
+    company: 'Agora Partnerships',
+    date: 'september 2024 – present',
+    description:
+      'Working on a team building a Full stack application with Next.js, TypeScript, Express, and PostgreSQL. Implementing intuitive interfaces, authentication, permission management, and efficient communication between frontend and backend.',
+    imgUrl: '/agora-logo.png',
+  },
+  {
+    date: 'august 2019 – august 2023',
+    title: 'Operations Director',
+    company: 'zoneflick',
+    description:
+      'Designed and implemented automated systems for video translation and localization processes, enabling collaboration among a team of approximately 30 professionals. Additionally, I developed Business Intelligence reports to drive data-driven decision-making.',
+    imgUrl: '/zoneflick-logo.png',
+  },
+];
+---
+
+<section id='experience' class='mb-20'>
+  <h2 class='text-2xl font-bold text-center mb-10 md:text-3xl'>Experience</h2>
+  <div class='md:flex md:justify-center md:max-w-5xl md:mx-auto md:gap-5'>
+    <ol class='relative mt-16'>
+      {
+        EXPERIENCE.map((experience) => (
+          <li class=''>
+            <ExperienceItem {...experience} />
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>
