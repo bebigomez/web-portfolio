@@ -4,20 +4,20 @@ import GitHub from '../components/icons/GitHub.astro';
 import LinkedIn from '../components/icons/LinkedIn.astro';
 ---
 
-<section id="hero" class="mx-auto py-20 md:flex md:justify-center md:items-center md:py-40">
+<section id="hero" class="py-20 md:flex md:justify-center md:items-center md:py-40">
   <div class="flex justify-center">
-    <img class="w-72 h-72 object-cover" src="/personal-images/me.webp" alt="Victor Gomez Photo" width="288" height="288" loading="lazy" />
+    <img class="w-72 h-72" src="/personal-images/me.webp" alt="Victor Gomez Photo" loading="lazy" />
   </div>
-  <div class="text-center my-6 md:ml-6 md:text-center md:mt-0">
+  <div class="text-center my-6 md:ml-6">
     <h1 class="text-4xl font-semibold md:text-5xl">Victor Gomez</h1>
-    <h2 class="font-normal text-lg mb-3 md:text-2xl">Full Stack Web Developer</h2>
+    <h2 class="text-lg font-normal mb-3 md:text-2xl">Full Stack Web Developer</h2>
     <Button href="mailto:vhgomez.py@gmail.com">Contact me</Button>
-    <div class="flex gap-2 justify-center md:justify-center mt-3">
+    <div class="flex justify-center gap-2 mt-3">
       <a href="https://github.com/bebigomez" target="_blank" rel="noopener" aria-label="bebigomez GitHub Page">
-        <GitHub class="h-7 w-7 transition-transform duration-200 hover:scale-105" />
+        <GitHub class="h-7 w-7 hover:scale-110 transition-transform duration-300" />
       </a>
       <a href="https://www.linkedin.com/in/victor-gomez-dev" target="_blank" rel="noopener" aria-label="Victor Gomez LinkedIn Page">
-        <LinkedIn class="h-7 w-7 transition-transform duration-200 hover:scale-105" />
+        <LinkedIn class="h-7 w-7 hover:scale-110 transition-transform duration-300 rounded-md" />
       </a>
     </div>
   </div>

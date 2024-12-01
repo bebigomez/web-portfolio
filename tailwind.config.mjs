@@ -6,7 +6,11 @@ export default {
       gridTemplateColumns: {
         'Uno/dos': '1fr, 1fr',
       },
+      colors: {
+        'primary': '#2000FF',
+      },
     },
   },
   plugins: [],
+  darkMode: "class"
 };

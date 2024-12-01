@@ -22,7 +22,7 @@ const navItems = [
   id="myHeader"
   class="fixed right-0 left-0 top:0 transition duration-500"
 >
-  <nav class="bg-white text-1xl font-medium text-center py-4 md:text-3xl">
+  <nav class="bg-white dark:bg-neutral-900 text-1xl font-medium text-center py-4 md:text-3xl">
     {
       navItems.map((link) => (
         <a aria-label={link.label} href={link.url} class="mx-4 inline-block">
@@ -30,6 +30,8 @@ const navItems = [
         </a>
       ))
     }
+    <button id="toggleDarkMode">Toggle</button>
+
   </nav>
 </header>
 
@@ -44,6 +46,14 @@ const navItems = [
 </style>
 
 <script>
+  const toggleButton = document.getElementById('toggleDarkMode');
+  const htmlElement = document.documentElement; // Esto selecciona el <html>
+
+  // Agrega un event listener al botón
+  toggleButton!.addEventListener('click', () => {
+  htmlElement.classList.toggle('dark'); // Añade o quita la clase "dark" en <html>
+});
+
   let lastScrollTop = 0;
   const header = document.getElementById('myHeader');
 
