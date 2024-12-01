@@ -11,6 +11,11 @@ const navItems = [
     url: '/#stack',
   },
   {
+    title: 'Experience',
+    label: 'experience',
+    url: '/#experience',
+  },
+  {
     title: 'About me',
     label: 'about me',
     url: '/#about-me',
@@ -19,30 +24,33 @@ const navItems = [
 ---
 
 <header
-  id="myHeader"
-  class="fixed right-0 left-0 top:0 transition duration-500"
+  id='myHeader'
+  class='fixed right-0 left-0 top:0 transition duration-500 z-50'
 >
-  <nav class="bg-white dark:bg-neutral-900 text-1xl font-medium text-center py-4 md:text-3xl">
+  <nav
+    class='bg-white dark:bg-neutral-800 text-1xl font-medium text-center py-4 md:text-3xl'
+  >
     {
       navItems.map((link) => (
-        <a aria-label={link.label} href={link.url} class="mx-4 inline-block">
+        <a
+          aria-label={link.label}
+          href={link.url}
+          class='mx-4 inline-block decoration-black dark:decoration-white'
+        >
           {link.title}
         </a>
       ))
     }
-    <button id="toggleDarkMode">Toggle</button>
-
+    <button id='toggleDarkMode'>Toggle</button>
   </nav>
 </header>
 
 <style>
   header nav a.activo {
     text-decoration: underline;
-    text-decoration-color: black; /* Color del subrayado */
-    text-underline-offset: 10px; /* Ajusta la distancia entre el texto y el subrayado */
+    text-underline-offset: 10px;
     border-radius: 100px;
-}
-
+  }
 </style>
 
 <script>
@@ -51,8 +59,8 @@ const navItems = [
 
   // Agrega un event listener al botón
   toggleButton!.addEventListener('click', () => {
-  htmlElement.classList.toggle('dark'); // Añade o quita la clase "dark" en <html>
-});
+    htmlElement.classList.toggle('dark'); // Añade o quita la clase "dark" en <html>
+  });
 
   let lastScrollTop = 0;
   const header = document.getElementById('myHeader');
@@ -71,8 +79,7 @@ const navItems = [
 
   function determineVisibleSection() {
     var sections = document.querySelectorAll('section');
-    var scrollPosition =
-      window.scrollY || document.documentElement.scrollTop;
+    var scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
     for (var i = 0; i < sections.length; i++) {
       var section = sections[i];
@@ -81,7 +88,7 @@ const navItems = [
 
       if (
         // El -2 de la línea siguiente permite que se añada el estilo a la sección.
-        scrollPosition > sectionTop -2 &&
+        scrollPosition > sectionTop - 2 &&
         scrollPosition < sectionTop + sectionHeight
       ) {
         // Si la sección está visible, resaltar el enlace correspondiente en el encabezado
