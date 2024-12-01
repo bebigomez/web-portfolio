@@ -5,7 +5,7 @@ const navItems = [
   {
     title: 'modio Clothing Store',
     description:
-      'An ecommerce platform for a fictional clothing store called modio. Users can browse through a wide range of clothing items, add them to their cart, and proceed to checkout. Built with a focus on user experience and smooth navigation.',
+      'An ecommerce platform for a fictional clothing store. Users can browse through a wide range of items, filtered them, add them to their carts, and proceed to checkout. Built with a focus on user experience and smooth navigation.',
     image: '/projects/project-1.webp',
     url: 'https://modio-clothing-store.onrender.com/',
   },
@@ -13,14 +13,14 @@ const navItems = [
     title: 'ABA Blog app',
     credentials: "Login with username 'guestUser' and password 'SuperSecretPass'.",
     description:
-      "A feature-rich blog application with user management capabilities, inspired by the exercise developed in the Full Stack Open course offered by the University of Helsinki. Users can sign up, create, like and comment on different posts.",
+      "A blog application with user management capabilities, inspired by the exercises developed in the Full Stack Open course offered by the University of Helsinki. Users can sign up, create, like and comment on different posts.",
     image: '/projects/project-2.webp',
     url: 'https://aba-blog-app.onrender.com/',
   },
   {
     title: 'thoughts.',
     description:
-      'A simple yet engaging platform where users from all around the world can discover and share some quick ideas, fostering creativity and inspiration across diverse cultures and backgrounds.',
+      'A simple yet engaging app where people from all over the world can discover new ideas and their places of origin, as well as share their own thoughts for others to read.',
     image: '/projects/project-3.webp',
     url: 'https://thoughts-p437.onrender.com/',
   },
@@ -29,16 +29,14 @@ const navItems = [
 
 <section id="projects" class="md:mb-24">
   <h1 class="text-2xl font-bold text-center mb-12 md:text-3xl">Projects</h1>
-  <div class="md:max-w-5xl md:mx-auto mb-16">
+  <div class="mb-16 md:max-w-5xl md:mx-auto">
     {
       navItems.map((project, index) => (
         <div class="md:flex my-6">
           <img
             src={project.image}
             alt={project.title}
-            width="384"
-            height="256"
-            class="w-full h-auto md:w-96 md:h-72 md:rounded-2xl bg-gray-300"
+            class="md:w-96 md:h-72 md:rounded-2xl"
           />
           <div class="p-4">
             <h2 class="text-xl font-bold mb-4 text-center md:text-left">
