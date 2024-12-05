@@ -19,16 +19,16 @@ const technologies = [
 ---
 
 <section id="stack" class="mb-20">
-  <h2 class="text-2xl font-bold text-center mb-12 md:text-3xl">Tech Stack</h2>
+  <h2 class="text-2xl font-bold text-center mb-12 md:text-3xl dark:text-white">Tech Stack</h2>
   <div
     class="grid grid-cols-2 gap-8 max-w-72 mx-auto justify-items-center items-center mb-10 md:grid-cols-4 md:max-w-5xl"
   >
     {
-      technologies.map((item, index) => (
-        <div>
+      technologies.map((item) => (
+        <div class="transition-all duration-300">
           <img
             src={`/stack/${item}.svg`}
-            class="max-h-16 max-w-20"
+            class={`max-h-16 max-w-20 ${item === 'express' || item === 'github-icon' ? 'dark:invert' : ''}`}
             alt={`${item} icon`}
             loading="lazy"
             width="80"
@@ -39,3 +39,4 @@ const technologies = [
     }
   </div>
 </section>
+

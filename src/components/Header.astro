@@ -6,14 +6,14 @@ const navItems = [
     url: '/#projects',
   },
   {
-    title: 'Stack',
-    label: 'stack',
-    url: '/#stack',
-  },
-  {
     title: 'Experience',
     label: 'experience',
     url: '/#experience',
+  },
+  {
+    title: 'Stack',
+    label: 'stack',
+    url: '/#stack',
   },
   {
     title: 'About me',
@@ -23,24 +23,17 @@ const navItems = [
 ];
 ---
 
-<header
-  id='myHeader'
-  class='fixed right-0 left-0 top:0 transition-transform duration-500 z-50'
->
-  <nav
-    class='bg-neutral-50 dark:bg-neutral-800 text-1xl font-medium text-center py-4 md:text-3xl'
-  >
-    {
-      navItems.map((link) => (
-        <a
-          aria-label={link.label}
-          href={link.url}
-          class='mx-4 inline-block decoration-black dark:decoration-white'
-        >
-          {link.title}
-        </a>
-      ))
-    }
+<header id="myHeader" class="fixed right-0 left-0 top-0 transition-transform duration-500 z-50">
+  <nav class="bg-neutral-50 dark:bg-neutral-800 text-1xl font-medium text-center py-4 md:text-3xl flex items-center justify-center">
+    {navItems.map((link) => (
+      <a
+        aria-label={link.label}
+        href={link.url}
+        class={`mx-4  decoration-black dark:decoration-white ${link.title === 'About me' && 'hidden md:block'}`}
+      >
+        {link.title}
+      </a>
+    ))}
     <input id="toggle" class="toggle" type="checkbox">
   </nav>
 </header>
@@ -53,7 +46,7 @@ const navItems = [
   }
 
   #toggle {
-    --size: 1.6rem;
+    --size: 1.2rem;
 
     appearance: none;
     outline: none;
